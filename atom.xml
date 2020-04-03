@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-21T17:52:07.375Z</updated>
+  <updated>2020-04-03T14:28:58.896Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序页面上推</title>
+    <link href="http://yoursite.com/2020/03/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%8E%A8/"/>
+    <id>http://yoursite.com/2020/03/30/小程序页面上推/</id>
+    <published>2020-03-30T14:31:17.000Z</published>
+    <updated>2020-04-03T14:28:58.896Z</updated>
+    
+    <content type="html"><![CDATA[<p>微信小程序中的表单输入组件默认上推页面，不符合某些需求，下面是一个解决方案。</p><ol><li>设置表单组件的默认上推页面属性<code>adjust-position=“false”</code></li><li>表单组件绑定<code>focus</code>事件</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">focushandler(e)&#123;</span><br><span class="line">  <span class="comment">//height为输入框距离页面底部高度</span></span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">    bottom:e.detail.height</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输入区域绝对定位</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span> <span class="attr">style</span>=<span class="string">"&#123;&#123;bottom?'position:absolute;bottom:'+bottom+'px;':''&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;微信小程序中的表单输入组件默认上推页面，不符合某些需求，下面是一个解决方案。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;设置表单组件的默认上推页面属性&lt;code&gt;adjust-position=“false”&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;表单组件绑定&lt;code&gt;focus&lt;/code&gt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="wxapp" scheme="http://yoursite.com/tags/wxapp/"/>
+    
+      <category term="wechat" scheme="http://yoursite.com/tags/wechat/"/>
+    
+      <category term="weapp" scheme="http://yoursite.com/tags/weapp/"/>
+    
+  </entry>
   
   <entry>
     <title>request a pull request</title>
