@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: gromit1sm'b1og
-subtitle: 时满的博客
-description:记录一点自以为了不起的东西，偶尔发牢骚
-keywords:刘时满 personal blog
-author: 刘时满
+title: 1sm23
+subtitle: 1sm的博客
+description: 记录牢骚
+keywords: 刘时满 personal blog 1sm 1sm23
+author: lsm
 language: zh-Hans
 timezone:
 
@@ -78,6 +78,37 @@ theme: yilia
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:gromit1sm/gromit1sm.github.io.git
+- type: git
+  repo: ssh://root@198.181.43.42:26022/root/git/hexo.git
   branch: master
+- type: git
+  repo: https://github.com/1sm23/1sm23.github.io.git
+  branch: master
+
+jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+#rss插件
+plugin:
+- hexo-generator-feed
+
+# Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
