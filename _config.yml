@@ -3,11 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+<<<<<<< HEAD
 title: 1sm23
 subtitle: 1sm的博客
 description: 记录牢骚
 keywords: 刘时满 personal blog 1sm 1sm23
 author: lsm
+=======
+title: gromit1sm'b1og
+subtitle: lsm的博客
+description: 记录一点自以为了不起的东西，偶尔发牢骚
+keywords: lsm personal blog
+author: 
+>>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
 language: zh-Hans
 timezone:
 
@@ -71,7 +79,16 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+#sitemap
+sitemap:
+  path: sitemap.xml
 ## Themes: https://hexo.io/themes/
 theme: yilia
 
@@ -81,10 +98,13 @@ deploy:
 - type: git
   repo: ssh://root@198.181.43.42:26022/root/git/hexo.git
   branch: master
+<<<<<<< HEAD
 - type: git
   repo: https://github.com/1sm23/1sm23.github.io.git
   branch: master
 
+=======
+>>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
 jsonContent:
     meta: false
     pages: false
@@ -102,6 +122,7 @@ jsonContent:
       permalink: false
       excerpt: false
       categories: false
+<<<<<<< HEAD
       tags: true
 #rss插件
 plugin:
@@ -112,3 +133,6 @@ feed:
 type: atom
 path: atom.xml
 limit: 20
+=======
+      tags: true
+>>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
