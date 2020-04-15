@@ -178,9 +178,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>前几天有同学在群里求助，需求是过滤一个对象数组，取得需要的属性，我们讨论完找到最好的解决方案后我自己又在项目中碰到类似需求😄</p>
-<p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：    </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span><span class="function">(<span class="params">(&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>
+        <p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：    </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">object_array:[</span><br><span class="line">  obj:&#123;</span><br><span class="line">  name,text,</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span><span class="function">(<span class="params">(&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>
 
 
       
