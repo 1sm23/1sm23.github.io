@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-03T14:28:58.896Z</updated>
+  <updated>2020-04-15T11:45:13.681Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对象数组过滤</title>
+    <link href="http://yoursite.com/2020/04/15/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4/"/>
+    <id>http://yoursite.com/2020/04/15/对象数组过滤/</id>
+    <published>2020-04-15T11:25:21.000Z</published>
+    <updated>2020-04-15T11:45:13.681Z</updated>
+    
+    <content type="html"><![CDATA[<p>前几天有同学在群里求助，需求是过滤一个对象数组，取得需要的属性。</p><p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span><span class="function">(<span class="params">(&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;前几天有同学在群里求助，需求是过滤一个对象数组，取得需要的属性。&lt;/p&gt;
+&lt;p&gt;假设&lt;code&gt;name,text&lt;/code&gt;是需要的属性，Es6 解构赋值：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="object array" scheme="http://yoursite.com/tags/object-array/"/>
+    
+      <category term="对象数组" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="javscript" scheme="http://yoursite.com/tags/javscript/"/>
+    
+      <category term="array" scheme="http://yoursite.com/tags/array/"/>
+    
+  </entry>
   
   <entry>
     <title>小程序页面上推</title>
@@ -103,7 +135,7 @@
     <link href="http://yoursite.com/2019/11/12/%E6%96%B0%E7%9A%84%E9%81%93%E8%B7%AF/"/>
     <id>http://yoursite.com/2019/11/12/新的道路/</id>
     <published>2019-11-12T13:23:11.000Z</published>
-    <updated>2019-11-12T13:44:20.037Z</updated>
+    <updated>2020-04-15T11:26:43.226Z</updated>
     
     <content type="html"><![CDATA[<p>距离上次博客（2019-09-26）已经过去了半月，久到我对hexo的一些指令开始生疏了。我也入职了现在的公司<a href="https://shishuo.com" target="_blank" rel="noopener">师说</a>，老板是个看起来很年轻的前网易开发，浙大高材生。公司算上我也一共四人，另外两人其中一个主要是是做销售，另外一个是个java开发大哥，团队走到现在留下来的都是骨干了，我现在主要负责师说小程序前端新版本的开发，主干功能是在线课程直播和课程预约。</p><p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g8vl9ci9sbj30dw0dwmyw.jpg" alt="师说"></p><p>​        一周前由于感冒或是食物残渣引发了智齿发炎，这一周吃的东西可以说是惨不忍睹。我是属于比较重口的人群，这次智齿诱发的牙冠炎让我的牙龈肿的老高，吃饭的痛苦已经大于饿肚子的痛苦了！期间请假去看了牙医，医生说现在发炎时期不能拔牙，只得等它慢慢好起来之后找个机会拔了。</p>]]></content>
     
@@ -117,7 +149,7 @@
     </summary>
     
     
-      <category term="dairy" scheme="http://yoursite.com/categories/dairy/"/>
+      <category term="闲言碎语" scheme="http://yoursite.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
   </entry>
