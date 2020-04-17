@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-15T11:49:42.854Z</updated>
+  <updated>2020-04-17T11:55:00.018Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序&lt;text&gt;</title>
+    <link href="http://yoursite.com/2020/04/17/%E8%B4%A8%E7%96%91%E5%90%8E%E5%B9%B6%E4%BD%9C%E5%87%BA%E8%A1%8C%E5%8A%A8/"/>
+    <id>http://yoursite.com/2020/04/17/质疑后并作出行动/</id>
+    <published>2020-04-17T05:17:17.000Z</published>
+    <updated>2020-04-17T11:55:00.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>​        今天在微信小程序碰到一个问题，一个区域的样式出现了错误，但我并没有修改那一个板块的代码，<code>view</code>的高度比之前的正常版本高了一倍，我对比了历史代码，确认样式是没有动过的，于是我瞄向了<code>wxml</code>代码，看到该区域是由<a href="https://developers.weixin.qq.com/miniprogram/dev/component/text.html" target="_blank" rel="noopener"><text></text></a>标签写的，我心里有了一丝怀疑🤨，是这个标签出了问题，因为通常是用<code>&lt;view&gt;</code>标签来代替<code>&lt;text&gt;</code>标签，为的就是避免出一些奇奇怪怪的问题。</p><p>​        过程不表，结果就是<code>&lt;text&gt;</code>里有个vscode格式化加入的回车，是老板指出来的。害，提出质疑后一定要做出行动啊。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>热门<span class="tag">&lt;/<span class="name">text</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span></span><br><span class="line">热门</span><br><span class="line"><span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​        今天在微信小程序碰到一个问题，一个区域的样式出现了错误，但我并没有修改那一个板块的代码，&lt;code&gt;view&lt;/code&gt;的高度比之前的正常版本高了一倍，我对比了历史代码，确认样式是没有动过的，于是我瞄向了&lt;code&gt;wxml&lt;/code&gt;代码，看到该区域
+      
+    
+    </summary>
+    
+    
+    
+      <category term="wxapp" scheme="http://yoursite.com/tags/wxapp/"/>
+    
+      <category term="微信小程序" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="text标签" scheme="http://yoursite.com/tags/text%E6%A0%87%E7%AD%BE/"/>
+    
+      <category term="微信小程序高度" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%AB%98%E5%BA%A6/"/>
+    
+      <category term="微信小程序样式" scheme="http://yoursite.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A0%B7%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>对象数组过滤</title>
