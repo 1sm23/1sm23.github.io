@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.1sm23.com/"/>
-  <updated>2020-04-21T12:56:39.478Z</updated>
+  <updated>2020-04-21T15:49:59.524Z</updated>
   <id>https://www.1sm23.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.1sm23.com/2020/04/21/csgo-rws/"/>
     <id>https://www.1sm23.com/2020/04/21/csgo-rws/</id>
     <published>2020-04-21T11:33:01.000Z</published>
-    <updated>2020-04-21T12:56:39.478Z</updated>
+    <updated>2020-04-21T15:49:59.524Z</updated>
     
     <content type="html"><![CDATA[<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nlvs6bfj310s0rw45o.jpg" style="zoom:33%;"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nqmyakxj30yn0ovn1f.jpg" style="zoom:33%;"><p>5e对战平台和esea都采用了<code>RWS</code>值来统计选手的能力，那<code>RWS</code>到底是什么呢？<code>RWS</code>多少才是正常的？为什么我rating很高，<code>RWS</code>却是全队评价水平呢？🤔️</p><a id="more"></a><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>​        <code>RWS</code>统计数据是<strong>R</strong>ound <strong>W</strong>in <strong>S</strong>hares的缩写，用于表示玩家对团队整体成功的贡献。</p><h3 id="我怎么加RWS"><a href="#我怎么加RWS" class="headerlink" title="我怎么加RWS?"></a>我怎么加RWS?</h3><ul><li><code>RWS</code>值的范围从<code>0</code>到<code>100</code>，数值高的选手表示更厉害，平均<code>RWS</code>是10。</li><li>每回合只有胜利方获得100<code>RWS</code>或者说100胜利贡献。</li><li>输掉回合的队伍没有<code>RWS</code>增加。</li><li>掉线的人每回合都是0<code>RWS</code></li></ul><p>在纯靠击杀完成的回合，100点<code>RWS</code>根据每个人造成的伤害平均分配</p><ul><li>栗子#1：你造成了140伤害，你队伍其余的人总共造成了360伤害，你将得到28.00<code>RWS</code>（500 / 140 * 100)</li></ul><p>在雷包爆炸或者被拆除的回合，完成拆包或者下包的选手将会得到30<code>RWS</code>，剩下的70<code>RWS</code>将根据你们造成的伤害平均分配。</p><ul><li>栗子#2：你下包，包炸了，并且你当前回合造成的伤害是0，你的队友每人造成50伤害，那么你当前回合将得到30<code>RWS</code>，你的队友每人得到17.50<code>RWS</code>（(100-30)/5)</li><li>栗子#3：你拆了雷包，并且造成了100伤害，你的队友每人造成了50点伤害，那么你会得到53.33<code>RWS</code>（其中30是拆包，其余的23.33是根据伤害分配的）</li></ul><p><a href="https://support.esea.net/hc/en-us/articles/360008740634-What-is-RWS-" target="_blank" rel="noopener">esea原文链接</a></p>]]></content>
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="闲言碎语" scheme="https://www.1sm23.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
       <category term="csgo" scheme="https://www.1sm23.com/tags/csgo/"/>
@@ -54,7 +56,7 @@
     <link href="https://www.1sm23.com/2020/04/17/%E8%B4%A8%E7%96%91%E5%90%8E%E5%B9%B6%E4%BD%9C%E5%87%BA%E8%A1%8C%E5%8A%A8/"/>
     <id>https://www.1sm23.com/2020/04/17/质疑后并作出行动/</id>
     <published>2020-04-17T05:17:17.000Z</published>
-    <updated>2020-04-17T11:55:00.018Z</updated>
+    <updated>2020-04-21T15:49:44.810Z</updated>
     
     <content type="html"><![CDATA[<p>​        今天在微信小程序碰到一个问题，一个区域的样式出现了错误，但我并没有修改那一个板块的代码，<code>view</code>的高度比之前的正常版本高了一倍，我对比了历史代码，确认样式是没有动过的，于是我瞄向了<code>wxml</code>代码，看到该区域是由<a href="https://developers.weixin.qq.com/miniprogram/dev/component/text.html" target="_blank" rel="noopener"><text></text></a>标签写的，我心里有了一丝怀疑🤨，是这个标签出了问题，因为通常是用<code>&lt;view&gt;</code>标签来代替<code>&lt;text&gt;</code>标签，为的就是避免出一些奇奇怪怪的问题。</p><p>​        过程不表，结果就是<code>&lt;text&gt;</code>里有个vscode格式化加入的回车，是老板指出来的。害，提出质疑后一定要做出行动啊。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>热门<span class="tag">&lt;/<span class="name">text</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span></span><br><span class="line">热门</span><br><span class="line"><span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -67,6 +69,8 @@
     
     </summary>
     
+    
+      <category term="微信小程序" scheme="https://www.1sm23.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
       <category term="wxapp" scheme="https://www.1sm23.com/tags/wxapp/"/>
@@ -86,7 +90,7 @@
     <link href="https://www.1sm23.com/2020/04/15/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4/"/>
     <id>https://www.1sm23.com/2020/04/15/对象数组过滤/</id>
     <published>2020-04-15T11:25:21.000Z</published>
-    <updated>2020-04-15T11:49:42.854Z</updated>
+    <updated>2020-04-21T15:49:53.456Z</updated>
     
     <content type="html"><![CDATA[<p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：    </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">object_array:[</span><br><span class="line">  obj:&#123;</span><br><span class="line">  name,text,</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span><span class="function">(<span class="params">(&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -100,6 +104,8 @@
     
     </summary>
     
+    
+      <category term="javascript" scheme="https://www.1sm23.com/categories/javascript/"/>
     
     
       <category term="object array" scheme="https://www.1sm23.com/tags/object-array/"/>
@@ -117,7 +123,7 @@
     <link href="https://www.1sm23.com/2020/03/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%8E%A8/"/>
     <id>https://www.1sm23.com/2020/03/30/小程序页面上推/</id>
     <published>2020-03-30T14:31:17.000Z</published>
-    <updated>2020-04-03T14:28:58.896Z</updated>
+    <updated>2020-04-21T15:51:49.415Z</updated>
     
     <content type="html"><![CDATA[<p>微信小程序中的表单输入组件默认上推页面，不符合某些需求，下面是一个解决方案。</p><ol><li>设置表单组件的默认上推页面属性<code>adjust-position=“false”</code></li><li>表单组件绑定<code>focus</code>事件</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">focushandler(e)&#123;</span><br><span class="line">  <span class="comment">//height为输入框距离页面底部高度</span></span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">    bottom:e.detail.height</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输入区域绝对定位</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span> <span class="attr">style</span>=<span class="string">"&#123;&#123;bottom?'position:absolute;bottom:'+bottom+'px;':''&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -134,8 +140,12 @@
     </summary>
     
     
+      <category term="wxapp" scheme="https://www.1sm23.com/categories/wxapp/"/>
+    
     
       <category term="wxapp" scheme="https://www.1sm23.com/tags/wxapp/"/>
+    
+      <category term="微信小程序" scheme="https://www.1sm23.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
       <category term="wechat" scheme="https://www.1sm23.com/tags/wechat/"/>
     
@@ -148,7 +158,7 @@
     <link href="https://www.1sm23.com/2020/03/22/request-a-pull-request/"/>
     <id>https://www.1sm23.com/2020/03/22/request-a-pull-request/</id>
     <published>2020-03-21T17:28:11.000Z</published>
-    <updated>2020-03-21T17:52:07.375Z</updated>
+    <updated>2020-04-21T15:50:18.532Z</updated>
     
     <content type="html"><![CDATA[<p>公司有用到腾讯云的<a href="https://github.com/tencentyun/TIC" target="_blank" rel="noopener">TIC</a> PasS服务，TIC全称腾讯云互动课堂在线教育解决方案，就是一个白板加上IM功能，在小程序端里其中的白板组件board-component使用起来体验极其不好，画笔垂直绘画的时候很大几率会引起页面滚动，在小程序社区找到解决问题的办法后我有了提pull request的想法。</p><p>首先fork一份到自己的仓库</p><p>然后clone自己的fork到本地</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> yourforkrepo</span><br></pre></td></tr></table></figure><p>作出修改后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">''</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>最后在自己的仓库上方点击Pull request , New pull request，作出评论即可啦</p><p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd22scz3dcj31ex0u0jxd.jpg" alt></p>]]></content>
     
@@ -161,6 +171,8 @@
     
     </summary>
     
+    
+      <category term="git" scheme="https://www.1sm23.com/categories/git/"/>
     
     
       <category term="git" scheme="https://www.1sm23.com/tags/git/"/>
@@ -195,35 +207,11 @@
   </entry>
   
   <entry>
-    <title>新的道路</title>
-    <link href="https://www.1sm23.com/2019/11/12/%E6%96%B0%E7%9A%84%E9%81%93%E8%B7%AF/"/>
-    <id>https://www.1sm23.com/2019/11/12/新的道路/</id>
-    <published>2019-11-12T13:23:11.000Z</published>
-    <updated>2020-04-15T11:26:43.226Z</updated>
-    
-    <content type="html"><![CDATA[<p>距离上次博客（2019-09-26）已经过去了半月，久到我对hexo的一些指令开始生疏了。我也入职了现在的公司<a href="https://shishuo.com" target="_blank" rel="noopener">师说</a>，老板是个看起来很年轻的前网易开发，浙大高材生。公司算上我也一共四人，另外两人其中一个主要是是做销售，另外一个是个java开发大哥，团队走到现在留下来的都是骨干了，我现在主要负责师说小程序前端新版本的开发，主干功能是在线课程直播和课程预约。</p><p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g8vl9ci9sbj30dw0dwmyw.jpg" alt="师说"></p><p>​        一周前由于感冒或是食物残渣引发了智齿发炎，这一周吃的东西可以说是惨不忍睹。我是属于比较重口的人群，这次智齿诱发的牙冠炎让我的牙龈肿的老高，吃饭的痛苦已经大于饿肚子的痛苦了！期间请假去看了牙医，医生说现在发炎时期不能拔牙，只得等它慢慢好起来之后找个机会拔了。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;距离上次博客（2019-09-26）已经过去了半月，久到我对hexo的一些指令开始生疏了。我也入职了现在的公司&lt;a href=&quot;https://shishuo.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;师说&lt;/a&gt;，老板是个看起来很年轻的前网易
-      
-    
-    </summary>
-    
-    
-      <category term="闲言碎语" scheme="https://www.1sm23.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>这个博客的历程</title>
     <link href="https://www.1sm23.com/2019/09/23/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
     <id>https://www.1sm23.com/2019/09/23/这个博客的历程/</id>
     <published>2019-09-23T12:55:17.000Z</published>
-    <updated>2019-09-23T13:16:25.000Z</updated>
+    <updated>2020-04-21T15:47:37.708Z</updated>
     
     <content type="html"><![CDATA[<p>就在今天，博客的第一次迁移工作已经完成了，从访问不太稳定的github pages挪到了我那租用了快三年的搬瓦工洛杉矶机房上。配置了 nginx 和 git自动部署，对nginx的简单配置算是了解了一点（感谢伟大的搜索引擎🙏和耐心的教程作者们）。不过，境外的服务器始终是不稳定，我也购入了阿里云的轻量服务，主机在上海，所以这只是万里长征的一小步！在这个域名到期后我打算在阿里云重新购买新域名，备案后进行第二次迁移。</p><p>今天我也添加了https协议，用的是今年4月从<a href="https://freessl.cn" target="_blank" rel="noopener">freessl</a>免费申请的证书。我还将解析dns的服务从腾讯云迁移到了阿里云，方便以后操作。</p>]]></content>
     
@@ -240,8 +228,6 @@
       <category term="闲言碎语" scheme="https://www.1sm23.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-      <category term="随笔" scheme="https://www.1sm23.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
   </entry>
   
   <entry>
@@ -249,7 +235,7 @@
     <link href="https://www.1sm23.com/2019/09/20/linux-%E5%AE%89%E8%A3%85-mlocate/"/>
     <id>https://www.1sm23.com/2019/09/20/linux-安装-mlocate/</id>
     <published>2019-09-20T13:45:48.000Z</published>
-    <updated>2020-04-10T15:48:21.017Z</updated>
+    <updated>2020-04-21T15:50:09.983Z</updated>
     
     <content type="html"><![CDATA[<p>linux查找软件，速度快，好用👌</p><p>安装步骤</p><ol><li><p>安装mlocate</p><p>Linux </p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mlocate</span><br></pre></td></tr></table></figure><p>​        Mac</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mlocate</span><br></pre></td></tr></table></figure><ol start="2"><li><p>更新数据库</p><p>Linux </p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updatedb</span><br></pre></td></tr></table></figure><p>​        Mac</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/libexec/locate.updatedb</span><br></pre></td></tr></table></figure>]]></content>
     
