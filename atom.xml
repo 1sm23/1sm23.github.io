@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.1sm23.com/"/>
-  <updated>2020-04-21T15:49:59.524Z</updated>
+  <updated>2020-04-21T16:04:25.620Z</updated>
   <id>https://www.1sm23.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>csgo RWS</title>
+    <title>csgo rws是什么？</title>
     <link href="https://www.1sm23.com/2020/04/21/csgo-rws/"/>
     <id>https://www.1sm23.com/2020/04/21/csgo-rws/</id>
     <published>2020-04-21T11:33:01.000Z</published>
-    <updated>2020-04-21T15:49:59.524Z</updated>
+    <updated>2020-04-21T16:04:25.620Z</updated>
     
     <content type="html"><![CDATA[<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nlvs6bfj310s0rw45o.jpg" style="zoom:33%;"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nqmyakxj30yn0ovn1f.jpg" style="zoom:33%;"><p>5e对战平台和esea都采用了<code>RWS</code>值来统计选手的能力，那<code>RWS</code>到底是什么呢？<code>RWS</code>多少才是正常的？为什么我rating很高，<code>RWS</code>却是全队评价水平呢？🤔️</p><a id="more"></a><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>​        <code>RWS</code>统计数据是<strong>R</strong>ound <strong>W</strong>in <strong>S</strong>hares的缩写，用于表示玩家对团队整体成功的贡献。</p><h3 id="我怎么加RWS"><a href="#我怎么加RWS" class="headerlink" title="我怎么加RWS?"></a>我怎么加RWS?</h3><ul><li><code>RWS</code>值的范围从<code>0</code>到<code>100</code>，数值高的选手表示更厉害，平均<code>RWS</code>是10。</li><li>每回合只有胜利方获得100<code>RWS</code>或者说100胜利贡献。</li><li>输掉回合的队伍没有<code>RWS</code>增加。</li><li>掉线的人每回合都是0<code>RWS</code></li></ul><p>在纯靠击杀完成的回合，100点<code>RWS</code>根据每个人造成的伤害平均分配</p><ul><li>栗子#1：你造成了140伤害，你队伍其余的人总共造成了360伤害，你将得到28.00<code>RWS</code>（500 / 140 * 100)</li></ul><p>在雷包爆炸或者被拆除的回合，完成拆包或者下包的选手将会得到30<code>RWS</code>，剩下的70<code>RWS</code>将根据你们造成的伤害平均分配。</p><ul><li>栗子#2：你下包，包炸了，并且你当前回合造成的伤害是0，你的队友每人造成50伤害，那么你当前回合将得到30<code>RWS</code>，你的队友每人得到17.50<code>RWS</code>（(100-30)/5)</li><li>栗子#3：你拆了雷包，并且造成了100伤害，你的队友每人造成了50点伤害，那么你会得到53.33<code>RWS</code>（其中30是拆包，其余的23.33是根据伤害分配的）</li></ul><p><a href="https://support.esea.net/hc/en-us/articles/360008740634-What-is-RWS-" target="_blank" rel="noopener">esea原文链接</a></p>]]></content>
     
@@ -48,6 +48,8 @@
       <category term="rws" scheme="https://www.1sm23.com/tags/rws/"/>
     
       <category term="csgodata" scheme="https://www.1sm23.com/tags/csgodata/"/>
+    
+      <category term="csgo rws是什么" scheme="https://www.1sm23.com/tags/csgo-rws%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     
   </entry>
   
@@ -145,11 +147,11 @@
     
       <category term="wxapp" scheme="https://www.1sm23.com/tags/wxapp/"/>
     
-      <category term="微信小程序" scheme="https://www.1sm23.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
       <category term="wechat" scheme="https://www.1sm23.com/tags/wechat/"/>
     
       <category term="weapp" scheme="https://www.1sm23.com/tags/weapp/"/>
+    
+      <category term="微信小程序" scheme="https://www.1sm23.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
