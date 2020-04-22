@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2020/03/21/flex布局换行对齐/');
 
-  precacheUrls.push('/2020/03/22/request-a-pull-request/');
+  precacheUrls.push('/2020/03/30/小程序页面上推/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
