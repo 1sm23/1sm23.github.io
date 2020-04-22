@@ -6,5 +6,5 @@ https://www.1sm23.com/2020/03/22/request-a-pull-request/
 https://www.1sm23.com/2020/03/21/flex布局换行对齐/
 https://www.1sm23.com/2019/09/23/这个博客的历程/
 https://www.1sm23.com/2019/09/20/linux-安装-mlocate/
-https://www.1sm23.com/2019/09/20/About-this-github-pages/
+https://www.1sm23.com/2019/09/20/关于/
 https://www.1sm23.com/2019/09/19/gitignore规则不生效/

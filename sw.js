@@ -26,13 +26,13 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/09/19/gitignore规则不生效/');
 
-  precacheUrls.push('/2019/09/20/About-this-github-pages/');
-
   precacheUrls.push('/2020/04/21/csgo-rws/');
 
   precacheUrls.push('/2019/09/20/linux-安装-mlocate/');
 
   precacheUrls.push('/2020/03/21/flex布局换行对齐/');
+
+  precacheUrls.push('/2020/03/22/request-a-pull-request/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};

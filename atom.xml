@@ -156,11 +156,11 @@
   </entry>
   
   <entry>
-    <title>request a pull request</title>
+    <title>提交pull request</title>
     <link href="https://www.1sm23.com/2020/03/22/request-a-pull-request/"/>
     <id>https://www.1sm23.com/2020/03/22/request-a-pull-request/</id>
     <published>2020-03-21T17:28:11.000Z</published>
-    <updated>2020-04-21T15:50:18.532Z</updated>
+    <updated>2020-04-22T12:17:12.545Z</updated>
     
     <content type="html"><![CDATA[<p>公司有用到腾讯云的<a href="https://github.com/tencentyun/TIC" target="_blank" rel="noopener">TIC</a> PasS服务，TIC全称腾讯云互动课堂在线教育解决方案，就是一个白板加上IM功能，在小程序端里其中的白板组件board-component使用起来体验极其不好，画笔垂直绘画的时候很大几率会引起页面滚动，在小程序社区找到解决问题的办法后我有了提pull request的想法。</p><p>首先fork一份到自己的仓库</p><p>然后clone自己的fork到本地</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> yourforkrepo</span><br></pre></td></tr></table></figure><p>作出修改后</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">''</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>最后在自己的仓库上方点击Pull request , New pull request，作出评论即可啦</p><p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd22scz3dcj31ex0u0jxd.jpg" alt></p>]]></content>
     
@@ -270,11 +270,11 @@
   </entry>
   
   <entry>
-    <title>About this github pages</title>
-    <link href="https://www.1sm23.com/2019/09/20/About-this-github-pages/"/>
-    <id>https://www.1sm23.com/2019/09/20/About-this-github-pages/</id>
+    <title>关于</title>
+    <link href="https://www.1sm23.com/2019/09/20/%E5%85%B3%E4%BA%8E/"/>
+    <id>https://www.1sm23.com/2019/09/20/关于/</id>
     <published>2019-09-19T16:20:08.000Z</published>
-    <updated>2020-04-22T11:45:49.413Z</updated>
+    <updated>2020-04-22T12:17:40.510Z</updated>
     
     <content type="html"><![CDATA[<p>占用了GitHub一点空间来存放脑子里的东西，陆陆续续把以前记得和以后想写的都放到这上面来.</p><p>过段时间应该会博客加上disqus评论，将空间迁移到最近购买的一年阿里云轻量，购置域名、备案再加上https证书，迁移静态博客不是一件复杂的事，主要是想学习一下linux的一些操作，例如vim，还有nginx的简单配置配置。</p><p>写作呢，一是练习一下自己的markdown语法，二是把自己的脑子里的东西写出来，锻炼表达，吐槽一下。</p>]]></content>
     
