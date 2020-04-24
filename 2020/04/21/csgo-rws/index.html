@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nlvs6bfj310s0rw45o.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nqmyakxj30yn0ovn1f.jpg">
-<meta property="og:updated_time" content="2020-04-22T11:44:54.337Z">
+<meta property="og:updated_time" content="2020-04-24T13:51:06.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="csgo rws是什么？">
 <meta name="twitter:description" content="5e对战平台和esea都采用了RWS值来统计选手的能力，那RWS到底是什么呢？RWS多少才是正常的？为什么我rating很高，RWS却是全队平均水平呢？🤔️">
@@ -189,11 +189,11 @@
 </ul>
 <p>在纯靠击杀完成的回合，100点<code>RWS</code>根据每个人造成的伤害平均分配</p>
 <ul>
-<li>栗子#1：你造成了140伤害，你队伍其余的人总共造成了360伤害，你将得到28.00<code>RWS</code>（500 / 140 * 100)</li>
+<li>栗子#1：你造成了140伤害，你队伍其余的人总共造成了360伤害，你将得到28.00<code>RWS</code>（140 / 500 * 100)</li>
 </ul>
 <p>在雷包爆炸或者被拆除的回合，完成拆包或者下包的选手将会得到30<code>RWS</code>，剩下的70<code>RWS</code>将根据你们造成的伤害平均分配。</p>
 <ul>
-<li>栗子#2：你下包，包炸了，并且你当前回合造成的伤害是0，你的队友每人造成50伤害，那么你当前回合将得到30<code>RWS</code>，你的队友每人得到17.50<code>RWS</code>（(100-30)/5)</li>
+<li>栗子#2：你下包，包炸了，并且你当前回合造成的伤害是0，你的队友每人造成50伤害，那么你当前回合将得到30<code>RWS</code>，你的队友每人得到17.50<code>RWS</code>（(100-30)/4)</li>
 <li>栗子#3：你拆了雷包，并且造成了100伤害，你的队友每人造成了50点伤害，那么你会得到53.33<code>RWS</code>（其中30是拆包，其余的23.33是根据伤害分配的）</li>
 </ul>
 <p><a href="https://support.esea.net/hc/en-us/articles/360008740634-What-is-RWS-" target="_blank" rel="noopener">esea原文链接</a></p>
@@ -711,7 +711,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </div>
   </div>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1587558543258')
+  navigator.serviceWorker.register('/sw.js?t=1587736279133')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
