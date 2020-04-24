@@ -6,7 +6,7 @@ menu:
 
 # SubNav
 subnav:
-  github: "https://www.github.com/gromit1sm"
+  github: "https://www.github.com/1sm23"
   weibo: "https://www.weibo.com/gromit2"
   rss: "/atom.xml"
   #zhihu: ""
@@ -17,10 +17,10 @@ subnav:
   #segmentfault: "#"
   #bilibili: "#"
   #acfun: "#"
-  mail: "474772997@qq.com"
+  # mail: "ninja1sm@163.com"
   #facebook: "#"
   #google: "#"
-  twitter: "https://www.twitter.com/gromit4real"
+  # twitter: "https://www.twitter.com/gromit4real"
   #linkedin: "#"
 
 rss: /atom.xml
@@ -65,8 +65,9 @@ top: true
 # Miscellaneous
 baidu_analytics: ''
 google_analytics: ''
-favicon: /favicon.png
+favicon: /images/favicon.ico
 
+apple_touch_icon: /images/apple-touch-icon.png
 #你的头像url
 avatar: /assets/img/liubo.gif
 

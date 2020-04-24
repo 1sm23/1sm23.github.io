@@ -5,9 +5,11 @@ tags:
 - linux
 - mlocate
 - linux app
-category:
+categories:
 - linux
 ---
+
+linux查找软件，速度快，好用👌
 
 安装步骤
 

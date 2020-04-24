@@ -3,25 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-<<<<<<< HEAD
 title: 1sm23
 subtitle: 1sm的博客
 description: 记录牢骚
 keywords: 刘时满 personal blog 1sm 1sm23
 author: lsm
-=======
-title: gromit1sm'b1og
-subtitle: lsm的博客
-description: 记录一点自以为了不起的东西，偶尔发牢骚
-keywords: lsm personal blog
-author: 
->>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://www.1sm23.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -51,16 +43,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -80,59 +72,96 @@ pagination_dir: page
 
 # Extensions
 Plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
+  - hexo-generator-feed
+  - hexo-generator-baidu-sitemap
+  - hexo-generator-sitemap
+
+baidusitemap:
+  path: baidusitemap.xml
+sitemap:
+  path: sitemap.xml
 feed:
   type: atom
   path: atom.xml
   limit: 20
 #sitemap
-sitemap:
-  path: sitemap.xml
+
 ## Themes: https://hexo.io/themes/
 theme: yilia
+#百度主动提交
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: ssh://root@198.181.43.42:26022/root/git/hexo.git
-  branch: master
-<<<<<<< HEAD
-- type: git
-  repo: https://github.com/1sm23/1sm23.github.io.git
-  branch: master
+  - type: git
+    repo: ssh://root@198.181.43.42:26022/root/git/hexo.git
+    branch: master
+  - type: git
+    repo: https://github.com/1sm23/1sm23.github.io.git
+    branch: master
+  - type: baidu_url_submitter
 
-=======
->>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
+baidu_url_submit:
+  count: 100 ## 提交最新的五个链接
+  host: www.1sm23.com ## 百度站长平台中注册的域名
+  token: mwZT6W1mhSxO5vso ## 准入秘钥
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
 jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-<<<<<<< HEAD
-      tags: true
-#rss插件
-plugin:
-- hexo-generator-feed
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
 
-# Feed Atom
-feed:
-type: atom
-path: atom.xml
-limit: 20
-=======
-      tags: true
->>>>>>> 639e78ebb02e14308b4c0af3ca5d40bef9241bd7
+# pwa
+pwa:
+  manifest:
+    path: /manifest.json
+    body:
+      name: 1sm的博客
+      short_name: 1sm
+      icons:
+        - src: /images/android-chrome-192x192.png
+          sizes: 192x192
+          type: image/png
+        - src: /images/android-chrome-512x512.png
+          sizes: 512x512
+          type: image/png
+      start_url: /index.html
+      theme_color: '#209CEE'
+      background_color: '#ffffff'
+      display: standalone
+  serviceWorker:
+    path: /sw.js
+    preload:
+      urls:
+        - /
+      posts: 5
+    opts:
+      networkTimeoutSeconds: 5
+    routes:
+      - pattern: !!js/regexp /hm.baidu.com/
+        strategy: networkOnly
+      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+        strategy: cacheFirst
+      - pattern: !!js/regexp /\//
+        strategy: networkFirst
+  priority: 5
+
+
+
+
