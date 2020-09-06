@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2020/04/21/csgo-rws/');
+  precacheUrls.push('/2020/03/21/flex布局换行对齐/');
 
   precacheUrls.push('/2019/09/19/gitignore规则不生效/');
 
+  precacheUrls.push('/2019/09/20/关于/');
+
   precacheUrls.push('/2020/04/15/对象数组过滤/');
 
-  precacheUrls.push('/2020/07/26/微信小程序列表刷新/');
-
-  precacheUrls.push('/2020/03/30/微信小程序页面上推/');
+  precacheUrls.push('/2020/03/22/第一个pull request/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
