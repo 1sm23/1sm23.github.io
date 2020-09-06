@@ -9,21 +9,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <title>船新版本之JavaScript闭包 | 1sm23</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。 什么是词法作用域？JavaScript中的词法作用域或静态作用域指的是根据变量、函数和对象在源代码中的位置来访问它们。例如: 123456789101112131415let a = &apos;global&apos;;  functio">
+  <meta name="description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。">
 <meta name="keywords" content="javascript,closure,闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="船新版本之JavaScript闭包">
 <meta property="og:url" content="https://www.1sm23.com/2020/09/04/船新版本之JavaScript闭包/index.html">
 <meta property="og:site_name" content="1sm23">
-<meta property="og:description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。 什么是词法作用域？JavaScript中的词法作用域或静态作用域指的是根据变量、函数和对象在源代码中的位置来访问它们。例如: 123456789101112131415let a = &apos;global&apos;;  functio">
+<meta property="og:description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig7x7ngn0j30zm0l00w3.jpg">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig813iluxj303c02i74a.gif">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig82c1w7rj30uk06oaau.jpg">
-<meta property="og:updated_time" content="2020-09-06T14:47:31.492Z">
+<meta property="og:updated_time" content="2020-09-06T14:49:47.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="船新版本之JavaScript闭包">
-<meta name="twitter:description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。 什么是词法作用域？JavaScript中的词法作用域或静态作用域指的是根据变量、函数和对象在源代码中的位置来访问它们。例如: 123456789101112131415let a = &apos;global&apos;;  functio">
+<meta name="twitter:description" content="什么是闭包？闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。 在深入研究闭包之前，让我们先了解词法作用域。">
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig7x7ngn0j30zm0l00w3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="1sm23" type="application/atom+xml">
@@ -176,6 +176,8 @@
       
         <h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。</p>
 <p>在深入研究闭包之前，让我们先了解词法作用域。</p>
+<a id="more"></a>
+
 <h3 id="什么是词法作用域？"><a href="#什么是词法作用域？" class="headerlink" title="什么是词法作用域？"></a>什么是词法作用域？</h3><p>JavaScript中的词法作用域或静态作用域指的是根据变量、函数和对象在源代码中的位置来访问它们。例如:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'global'</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> b = <span class="string">'outer'</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> c = <span class="string">'inner'</span></span><br><span class="line">      <span class="built_in">console</span>.log(c);   <span class="comment">// prints 'inner'</span></span><br><span class="line">      <span class="built_in">console</span>.log(b);   <span class="comment">// prints 'outer'</span></span><br><span class="line">      <span class="built_in">console</span>.log(a);   <span class="comment">// prints 'global'</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(a);     <span class="comment">// prints 'global'</span></span><br><span class="line">    <span class="built_in">console</span>.log(b);     <span class="comment">// prints 'outer'</span></span><br><span class="line">    inner();</span><br><span class="line">  &#125;</span><br><span class="line">outer();</span><br><span class="line"><span class="built_in">console</span>.log(a);         <span class="comment">// prints 'global'</span></span><br></pre></td></tr></table></figure>
 
@@ -765,7 +767,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 </div>
   </div>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1599403764043')
+  navigator.serviceWorker.register('/sw.js?t=1599403807725')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
