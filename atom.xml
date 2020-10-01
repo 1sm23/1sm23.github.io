@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.1sm23.com/"/>
-  <updated>2020-09-07T00:33:57.333Z</updated>
+  <updated>2020-10-01T12:31:40.328Z</updated>
   <id>https://www.1sm23.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>近期的几个学习目标</title>
+    <link href="https://www.1sm23.com/2020/10/01/%E8%BF%91%E6%9C%9F%E7%9A%84%E5%87%A0%E4%B8%AA%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87/"/>
+    <id>https://www.1sm23.com/2020/10/01/%E8%BF%91%E6%9C%9F%E7%9A%84%E5%87%A0%E4%B8%AA%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87/</id>
+    <published>2020-10-01T12:21:47.000Z</published>
+    <updated>2020-10-01T12:31:40.328Z</updated>
+    
+    <content type="html"><![CDATA[<p>有目标才有动力，自己近期想学习，或者说想弄明白的一些知识点，在这里我把它列出来，算是个stimulation</p><ul><li>js函数继承，相关的原型和原型链</li><li>git rebase的使用</li><li>comitizen的使用</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有目标才有动力，自己近期想学习，或者说想弄明白的一些知识点，在这里我把它列出来，算是个stimulation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;js函数继承，相关的原型和原型链&lt;/li&gt;
+&lt;li&gt;git rebase的使用&lt;/li&gt;
+&lt;li&gt;comitizen的使用&lt;/li&gt;
+&lt;/
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>船新版本之JavaScript闭包</title>
@@ -169,11 +196,11 @@
     
       <category term="wxapp" scheme="https://www.1sm23.com/tags/wxapp/"/>
     
-      <category term="微信小程序" scheme="https://www.1sm23.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
       <category term="wechat" scheme="https://www.1sm23.com/tags/wechat/"/>
     
       <category term="weapp" scheme="https://www.1sm23.com/tags/weapp/"/>
+    
+      <category term="微信小程序" scheme="https://www.1sm23.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
