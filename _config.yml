@@ -9,7 +9,7 @@ description: 记录牢骚
 keywords: 刘时满 personal blog 1sm 1sm23
 author: lsm
 language: zh-Hans
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -95,7 +95,7 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: ssh://root@198.181.43.42:26022/root/git/hexo.git
+    repo: ssh://root@144.168.56.67:26022/root/git/hexo.git
     branch: master
   - type: git
     repo: https://github.com/1sm23/1sm23.github.io.git
