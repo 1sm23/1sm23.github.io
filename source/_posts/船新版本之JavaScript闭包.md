@@ -6,7 +6,7 @@ tags:
 - closure
 - 闭包
 categories:
-- javascript
+- JavaScript
 ---
 
 ## 什么是闭包？
