@@ -128,39 +128,39 @@ jsonContent:
     tags: true
 
 # pwa
-pwa:
-  manifest:
-    path: /manifest.json
-    body:
-      name: 1sm的博客
-      short_name: 1sm
-      icons:
-        - src: /images/android-chrome-192x192.png
-          sizes: 192x192
-          type: image/png
-        - src: /images/android-chrome-512x512.png
-          sizes: 512x512
-          type: image/png
-      start_url: /index.html
-      theme_color: '#209CEE'
-      background_color: '#ffffff'
-      display: standalone
-  serviceWorker:
-    path: /sw.js
-    preload:
-      urls:
-        - /
-      posts: 5
-    opts:
-      networkTimeoutSeconds: 5
-    routes:
-      - pattern: !!js/regexp /hm.baidu.com/
-        strategy: networkOnly
-      - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
-        strategy: cacheFirst
-      - pattern: !!js/regexp /\//
-        strategy: networkFirst
-  priority: 5
+# pwa:
+#   manifest:
+#     path: /manifest.json
+#     body:
+#       name: 1sm的博客
+#       short_name: 1sm
+#       icons:
+#         - src: /images/android-chrome-192x192.png
+#           sizes: 192x192
+#           type: image/png
+#         - src: /images/android-chrome-512x512.png
+#           sizes: 512x512
+#           type: image/png
+#       start_url: /index.html
+#       theme_color: '#209CEE'
+#       background_color: '#ffffff'
+#       display: standalone
+#   serviceWorker:
+#     path: /sw.js
+#     preload:
+#       urls:
+#         - /
+#       posts: 5
+#     opts:
+#       networkTimeoutSeconds: 5
+#     routes:
+#       - pattern: !!js/regexp /hm.baidu.com/
+#         strategy: networkOnly
+#       - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+#         strategy: cacheFirst
+#       - pattern: !!js/regexp /\//
+#         strategy: networkFirst
+#   priority: 5
 
 
 
