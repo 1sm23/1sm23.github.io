@@ -27,6 +27,10 @@ tags:
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 /* 主轴 */
 .justify-between{
@@ -35,9 +39,9 @@ tags:
     justify-content: space-between;
 }
 .justify-center{
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 .justify-around{
     -ms-flex-pack: distribute;
