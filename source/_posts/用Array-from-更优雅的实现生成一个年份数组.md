@@ -3,9 +3,9 @@ title: 用Array.from()更优雅的实现生成一个年份数组
 date: 2020-11-01 20:20:27
 tags:
 - Array.from
-- JavaScript
+- javascript
 categories:
-- JavaScript
+- javascript
 ---
 
 相关：[Array.from()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
