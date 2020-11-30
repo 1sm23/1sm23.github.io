@@ -287,13 +287,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>相关：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from" target="_blank" rel="noopener">Array.from()</a><br>原项目</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1900</span>; i &lt; <span class="number">2030</span>; i++) &#123;</span><br><span class="line">  		<span class="keyword">this</span>.columns.push(i)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+        <p>相关：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from()</a><br>原项目</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1900</span>; i &lt; <span class="number">2030</span>; i++) &#123;</span><br><span class="line">  		<span class="built_in">this</span>.columns.push(i)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 <p>改造后</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.columns = <span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">2030</span> - <span class="number">1900</span> &#125;, (<span class="literal">undefined</span>, index) =&gt; <span class="keyword">return</span> <span class="number">1900</span> + index);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.columns = <span class="built_in">Array</span>.from(&#123; <span class="attr">length</span>: <span class="number">2030</span> - <span class="number">1900</span> &#125;, <span class="function">(<span class="params"><span class="literal">undefined</span>, index</span>) =&gt;</span> <span class="keyword">return</span> <span class="number">1900</span> + index);</span><br></pre></td></tr></table></figure>
 
-<p><code>Array.from()</code>的第一个参数是一个类数组或可迭代对象。类数组是一个具有<code>length</code>属性的对象；具体可迭代对象参考<a href="https://zh.javascript.info/iterable" target="_blank" rel="noopener">Iterable object</a></p>
+<p><code>Array.from()</code>的第一个参数是一个类数组或可迭代对象。类数组是一个具有<code>length</code>属性的对象；具体可迭代对象参考<a target="_blank" rel="noopener" href="https://zh.javascript.info/iterable">Iterable object</a></p>
 
       
 
@@ -638,9 +638,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nlvs6bfj310s0rw45o.jpg" style="zoom:33%;">
+        <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nlvs6bfj310s0rw45o.jpg" style="zoom:33%;" />
 
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nqmyakxj30yn0ovn1f.jpg" style="zoom:33%;">
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ge1nqmyakxj30yn0ovn1f.jpg" style="zoom:33%;" />
 
 <p>5e对战平台和esea都采用了<code>RWS</code>值来统计选手的能力，那<code>RWS</code>到底是什么呢？<code>RWS</code>多少才是正常的？为什么我rating很高，<code>RWS</code>却是全队平均水平呢？🤔️</p>
         
@@ -748,7 +748,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：    </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">object_array:[</span><br><span class="line">  obj:&#123;</span><br><span class="line">  name,text,</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span><span class="function">(<span class="params">(&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">object_array:[</span><br><span class="line">  obj:&#123;</span><br><span class="line">  name,text,</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span>(<span class="function">(<span class="params">&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -848,15 +848,15 @@
       
         <p>微信小程序中的表单输入组件默认上推页面，不符合某些需求，下面是一个解决方案。</p>
 <ol>
-<li>设置表单组件的默认上推页面属性<code>adjust-position=“false”</code></li>
+<li>设置表单组件的默认上推页面属性<code>adjust-position=“&#123;&#123;false&#125;&#125;”</code></li>
 <li>表单组件绑定<code>focus</code>事件</li>
 </ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">&quot;focushandler&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">focushandler(e)&#123;</span><br><span class="line">  <span class="comment">//height为输入框距离页面底部高度</span></span><br><span class="line">	<span class="keyword">this</span>.setData(&#123;</span><br><span class="line">    bottom:e.detail.height</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">focushandler</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//height为输入框距离页面底部高度</span></span><br><span class="line">	<span class="built_in">this</span>.setData(&#123;</span><br><span class="line">    bottom:e.detail.height</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输入区域绝对定位</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">"focushandler"</span> <span class="attr">style</span>=<span class="string">"&#123;&#123;bottom?'position:absolute;bottom:'+bottom+'px;':''&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">bindfocus</span>=<span class="string">&quot;focushandler&quot;</span> <span class="attr">style</span>=<span class="string">&quot;&#123;&#123;bottom?&#x27;position:absolute;bottom:&#x27;+bottom+&#x27;px;&#x27;:&#x27;&#x27;&#125;&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -954,7 +954,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>公司有用到腾讯云的<a href="https://github.com/tencentyun/TIC" target="_blank" rel="noopener">TIC</a> PasS服务，TIC全称腾讯云互动课堂在线教育解决方案，就是一个白板加上IM功能，在小程序端里其中的白板组件board-component使用起来体验极其不好，画笔垂直绘画的时候很大几率会引起页面滚动，在小程序社区找到解决问题的办法后我有了提pull request的想法。</p>
+        <p>公司有用到腾讯云的<a target="_blank" rel="noopener" href="https://github.com/tencentyun/TIC">TIC</a> PasS服务，TIC全称腾讯云互动课堂在线教育解决方案，就是一个白板加上IM功能，在小程序端里其中的白板组件board-component使用起来体验极其不好，画笔垂直绘画的时候很大几率会引起页面滚动，在小程序社区找到解决问题的办法后我有了提pull request的想法。</p>
         
       
 
@@ -1183,6 +1183,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">git不生效</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -1239,15 +1243,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array.from</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pull request</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array.from</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1260,10 +1264,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git不生效</a>
               </li>
             
             <div class="clearfix"></div>

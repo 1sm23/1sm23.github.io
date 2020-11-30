@@ -166,11 +166,9 @@
         <p>因为在工程里频繁用到flex布局，所以写了一套常用的flex样式组合</p>
 <a id="more"></a>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.row</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:-webkit-box;</span><br><span class="line">    <span class="attribute">display</span>:-ms-flexbox;</span><br><span class="line">    <span class="attribute">display</span>:flex;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: horizontal;</span><br><span class="line">    <span class="attribute">-webkit-box-direction</span>: normal;</span><br><span class="line">    <span class="attribute">-ms-flex-direction</span>: row;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.column</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    <span class="attribute">display</span>: -ms-flexbox;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">-webkit-box-orient</span>: vertical;</span><br><span class="line">    <span class="attribute">-webkit-box-direction</span>: normal;</span><br><span class="line">    <span class="attribute">-ms-flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 主轴 */</span></span><br><span class="line"><span class="selector-class">.justify-between</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-pack</span>: justify;</span><br><span class="line">    <span class="attribute">-ms-flex-pack</span>: justify;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.justify-center</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-pack</span>: center;</span><br><span class="line">    <span class="attribute">-ms-flex-pack</span>: center;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.justify-around</span>&#123;</span><br><span class="line">    <span class="attribute">-ms-flex-pack</span>: distribute;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 交叉轴 */</span></span><br><span class="line"><span class="selector-class">.item-center</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-align</span>: center;</span><br><span class="line">    <span class="attribute">-ms-flex-align</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-start</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-align</span>: start;</span><br><span class="line">    <span class="attribute">-ms-flex-align</span>: start;</span><br><span class="line">    <span class="attribute">align-items</span>: flex-start;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-end</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-align</span>: end;</span><br><span class="line">    <span class="attribute">-ms-flex-align</span>: end;</span><br><span class="line">    <span class="attribute">align-items</span>: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.grow</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-box-flex</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">-ms-flex-positive</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.shrink</span>&#123;</span><br><span class="line">    <span class="attribute">-ms-flex-negative</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 不换行 */</span></span><br><span class="line"><span class="selector-class">.no-wrap</span>&#123;</span><br><span class="line">    <span class="attribute">-ms-flex-wrap</span>: nowrap;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这套样式使用<code>gulp-autoprefixer</code>处理兼容问题，工程在<a href="https://github.com/1sm23/flex-layout.git" target="_blank" rel="noopener">flex-layout</a><br>浏览器兼容为</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">"browserslist": [</span><br><span class="line">    "&gt; 1%",</span><br><span class="line">    "last 2 versions",</span><br><span class="line">    <span class="string">"not ie &lt;= 8"</span></span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
-
-<p>其他css重制可以使用<a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a></p>
+<p>这套样式使用<code>gulp-autoprefixer</code>处理兼容问题，工程在<a target="_blank" rel="noopener" href="https://github.com/1sm23/flex-layout.git">flex-layout</a><br>浏览器兼容为</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;browserslist&quot;: [</span><br><span class="line">    &quot;&gt; 1%&quot;,</span><br><span class="line">    &quot;last 2 versions&quot;,</span><br><span class="line">    <span class="string">&quot;not ie &lt;= 8&quot;</span></span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+<p>其他css重制可以使用<a target="_blank" rel="noopener" href="https://necolas.github.io/normalize.css/">Normalize.css</a></p>
 
       
 
@@ -470,6 +468,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">git不生效</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
@@ -526,15 +528,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Array.from</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pull request</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Array.from</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -547,10 +549,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">git不生效</a>
               </li>
             
             <div class="clearfix"></div>
