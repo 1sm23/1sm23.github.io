@@ -7,17 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.1sm23.com">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <title>Undefined undefined 和 Null null | 1sm23</title><meta name="robots" content="noindex">
+  <title>Undefined undefined 和 Null null | 1sm23</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="根据最新的ECMAscript标砖，JavaScript里有9种类型：  其中6种可以通过typeof来检测的原始类型（Primitive）  undefined Boolean Number String BigInt Symbol">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Undefined undefined 和 Null null">
 <meta property="og:url" content="https://www.1sm23.com/2021/03/12/Undefined-undefined-%E5%92%8C-Null-null/index.html">
 <meta property="og:site_name" content="1sm23">
+<meta property="og:description" content="根据最新的ECMAscript标砖，JavaScript里有9种类型：  其中6种可以通过typeof来检测的原始类型（Primitive）  undefined Boolean Number String BigInt Symbol">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-03-12T04:36:03.000Z">
-<meta property="article:modified_time" content="2021-04-25T14:07:04.157Z">
+<meta property="article:modified_time" content="2021-04-26T04:49:30.741Z">
 <meta property="article:author" content="lsm">
 <meta property="article:tag" content="javascript">
+<meta property="article:tag" content="JavaScript数据类型">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="1sm23" type="application/atom+xml">
@@ -160,7 +163,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- flag of hidden posts -->
+        <p>根据最新的ECMAscript标砖，JavaScript里有9种类型：</p>
+<ul>
+<li><p>其中6种可以通过<code>typeof</code>来检测的原始类型（Primitive）</p>
+<ul>
+<li>undefined</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>BigInt</li>
+<li>Symbol</li>
+</ul>
+<a id="more"></a>
+</li>
+<li><p>结构化类型（Structural Types）</p>
+<ul>
+<li>Object</li>
+<li>Function</li>
+</ul>
+</li>
+<li><p>结构化根原始类型（Structural Root Primitive）</p>
+<ul>
+<li>null 特殊的原始类型，其值有额外的用途:如果对象不被继承，则显示null。</li>
+</ul>
+</li>
+</ul>
+<p>其中在面试中被考察到最多的就是 undefined 和 null 的区别。根据 mdn 定义，刚声明的变量和没有值的形式参数会被分配一个 undefined。而 null 虽然在JavaScript中也是一个原始值（primitive），所有的对象都由他派生（derive）而来，在使用<code>typeof</code>操作符会返回<code>object</code>。</p>
+<blockquote>
+<p>typeof null === ‘object’     //  true</p>
+</blockquote>
+<p>所以，他们的</p>
+<h4 id="共同点："><a href="#共同点：" class="headerlink" title="共同点："></a>共同点：</h4><ol>
+<li>都是原始类型。</li>
+<li>都只有一个值，undefined 为 undefined ，null 为 null。</li>
+</ol>
+<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4><ol>
+<li>含义完全不同</li>
+<li>undefined 可以使用<code>typeof</code>检测，而 null 不能。</li>
+</ol>
+
       
 
       
@@ -174,6 +215,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JavaScript数据类型</a>
         		</li>
       		
 		</ul>
@@ -241,6 +286,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2021/04/25/%E5%85%B3%E4%BA%8E%E5%96%9C%E6%8F%90gfw%E8%AE%A4%E8%AF%81%E8%BF%99%E4%BB%B6%E4%BA%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          关于喜提gfw认证这件事
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/02/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8css%E6%A0%B7%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的常用css样式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -533,6 +597,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">git不生效</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JavaScript数据类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">v2ray</a>
               </li>
             
             <div class="clearfix"></div>

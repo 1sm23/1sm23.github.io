@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.1sm23.com/"/>
-  <updated>2021-04-25T13:41:29.346Z</updated>
+  <updated>2021-04-25T14:42:10.786Z</updated>
   <id>https://www.1sm23.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://www.1sm23.com/2021/04/25/%E5%85%B3%E4%BA%8E%E5%96%9C%E6%8F%90gfw%E8%AE%A4%E8%AF%81%E8%BF%99%E4%BB%B6%E4%BA%8B/"/>
     <id>https://www.1sm23.com/2021/04/25/%E5%85%B3%E4%BA%8E%E5%96%9C%E6%8F%90gfw%E8%AE%A4%E8%AF%81%E8%BF%99%E4%BB%B6%E4%BA%8B/</id>
     <published>2021-04-25T11:02:04.000Z</published>
-    <updated>2021-04-25T13:41:29.346Z</updated>
+    <updated>2021-04-25T14:42:10.786Z</updated>
     
-    <content type="html"><![CDATA[<p>​        这个博客部署的服务器是搬瓦工的19.9cn2套餐，上面有个v2ray服务，2021年3月一天早上起来v2ray就异常了，上搬瓦工自带的检测工具一测试，果然是IP被ban了，等于这个博客也被连坐，还好hexo deploy配置里同样加了<a href="https://1sm23.github.io">github pages</a>虽然这样不符合github pages 的原本用途，但现在也只能是权宜之计了。</p><p>​        在被ban之后我花了8美刀更换IP，半个小时没到又被封了，发了工单给客服，回复说没有更好的解决办法，</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa3gn2d3j30vn0u0gv2.jpg" alt=""></p><a id="more"></a><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa4ekp81j318k0lw42b.jpg" alt=""></p><p>只能关掉服务等待gfw自动解封（可能）。之后我就彻底躺平了，关机等待可能的解封。今天突然想到这件事情，重新启动服务，发现还是没解封，但意外的发现用梯子还是可以访问博客内容的，所以我打算就这样吧，能看到我博客内容的都是和gfw抗争过的战友了，salute！</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa55t1cyj30m80ci0tw.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>​        这个博客部署的服务器是搬瓦工的19.9cn2套餐，上面有个v2ray服务，2021年3月一天早上起来v2ray就异常了，上搬瓦工自带的检测工具一测试，果然是IP被ban了，等于这个博客也被连坐，还好hexo deploy配置里同样加了<a href="https://1sm23.github.io">github pages</a>虽然这样不符合github pages 的原本用途，但现在也只能是权宜之计了。</p><p>​        在被ban之后我花了8美刀更换IP，半个小时没到又被封了，发了工单给客服，回复说没有更好的解决办法，</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa3gn2d3j30vn0u0gv2.jpg" alt=""></p><a id="more"></a><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa4ekp81j318k0lw42b.jpg" alt=""></p><p>只能关掉服务等待gfw自动解封（可能）。之后我就彻底躺平了，关机等待可能的解封。今天突然想到这件事情，重新启动服务，发现还是没解封，但意外的发现用梯子还是可以访问博客内容的，但每次文章更新怎么部署到主机就要下一番功夫了，直接<code>hexo deploy</code>现在是不行了，只能每次手动拷贝生成后的<code>public</code>文件夹。所以我打算就这样吧，能看到我博客内容的都是和gfw抗争过的战友了，salute！</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa55t1cyj30m80ci0tw.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
@@ -42,6 +42,41 @@
       <category term="the great firewall" scheme="https://www.1sm23.com/tags/the-great-firewall/"/>
     
       <category term="bandwagonhost" scheme="https://www.1sm23.com/tags/bandwagonhost/"/>
+    
+      <category term="v2ray" scheme="https://www.1sm23.com/tags/v2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Undefined undefined 和 Null null</title>
+    <link href="https://www.1sm23.com/2021/03/12/Undefined-undefined-%E5%92%8C-Null-null/"/>
+    <id>https://www.1sm23.com/2021/03/12/Undefined-undefined-%E5%92%8C-Null-null/</id>
+    <published>2021-03-12T04:36:03.000Z</published>
+    <updated>2021-04-26T04:49:30.741Z</updated>
+    
+    <content type="html"><![CDATA[<p>根据最新的ECMAscript标砖，JavaScript里有9种类型：</p><ul><li><p>其中6种可以通过<code>typeof</code>来检测的原始类型（Primitive）</p><ul><li>undefined</li><li>Boolean</li><li>Number</li><li>String</li><li>BigInt</li><li>Symbol</li></ul><a id="more"></a></li><li><p>结构化类型（Structural Types）</p><ul><li>Object</li><li>Function</li></ul></li><li><p>结构化根原始类型（Structural Root Primitive）</p><ul><li>null 特殊的原始类型，其值有额外的用途:如果对象不被继承，则显示null。</li></ul></li></ul><p>其中在面试中被考察到最多的就是 undefined 和 null 的区别。根据 mdn 定义，刚声明的变量和没有值的形式参数会被分配一个 undefined。而 null 虽然在JavaScript中也是一个原始值（primitive），所有的对象都由他派生（derive）而来，在使用<code>typeof</code>操作符会返回<code>object</code>。</p><blockquote><p>typeof null === ‘object’     //  true</p></blockquote><p>所以，他们的</p><h4 id="共同点："><a href="#共同点：" class="headerlink" title="共同点："></a>共同点：</h4><ol><li>都是原始类型。</li><li>都只有一个值，undefined 为 undefined ，null 为 null。</li></ol><h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4><ol><li>含义完全不同</li><li>undefined 可以使用<code>typeof</code>检测，而 null 不能。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;根据最新的ECMAscript标砖，JavaScript里有9种类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;其中6种可以通过&lt;code&gt;typeof&lt;/code&gt;来检测的原始类型（Primitive）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;undefined&lt;/li&gt;
+&lt;li&gt;Boolean&lt;/li&gt;
+&lt;li&gt;Number&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;BigInt&lt;/li&gt;
+&lt;li&gt;Symbol&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="https://www.1sm23.com/tags/javascript/"/>
+    
+      <category term="JavaScript数据类型" scheme="https://www.1sm23.com/tags/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
