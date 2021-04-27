@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig813iluxj303c02i74a.gif">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/007S8ZIlgy1gig82c1w7rj30uk06oaau.jpg">
 <meta property="article:published_time" content="2020-09-04T12:11:40.000Z">
-<meta property="article:modified_time" content="2020-11-29T03:09:13.062Z">
+<meta property="article:modified_time" content="2021-04-26T11:52:19.074Z">
 <meta property="article:author" content="lsm">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="closure">
@@ -168,7 +168,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。</p>
+        <h3 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h3><p>闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。</p>
 <p>在深入研究闭包之前，让我们先了解词法作用域。</p>
 <a id="more"></a>
 
@@ -178,7 +178,7 @@
 
 
 <p><code>inner</code>函数可以访问定义在他自己的作用域、<code>outer</code>函数作用域、全局作用域中定义的变量。<code>outer</code>函数可以访问在其自身作用域和全局作用域中定义的变量</p>
-<h2 id="闭包栗子"><a href="#闭包栗子" class="headerlink" title="闭包栗子"></a>闭包栗子</h2><h4 id="例子1"><a href="#例子1" class="headerlink" title="例子1"></a>例子1</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> name = <span class="string">&#x27;Peter&#x27;</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">displayName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> peter = person();</span><br><span class="line">peter(); <span class="comment">// prints &#x27;Peter&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="闭包栗子"><a href="#闭包栗子" class="headerlink" title="闭包栗子"></a>闭包栗子</h3><h4 id="例子1"><a href="#例子1" class="headerlink" title="例子1"></a>例子1</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> name = <span class="string">&#x27;Peter&#x27;</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">displayName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> peter = person();</span><br><span class="line">peter(); <span class="comment">// prints &#x27;Peter&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>在这段代码里，我们调用<code>person</code>函数返回了一个内部函数<code>displayName</code>并将该内部函数存储在<code>peter</code>变量中，当我们调用<code>peter</code>函数（实际上是引用了<code>displayName</code>函数），控制台打印出了’Peter’。</p>
 <p>但是<code>displayName</code>函数里没有叫做<code>name</code>的变量，所以这个函数可以以某种方式访问它的外部函数<code>person</code>甚至是在它已经执行完之后。所以这个<code>displayName</code>函数实际上就是一个闭包。</p>
@@ -187,7 +187,7 @@
 <p>这次我们把通过<code>getCounter</code>返回的匿名函数赋值给<code>count</code>变量，因为<code>count</code>函数现在是一个闭包，它能在<code>getCounter</code>函数返回之后访问到<code>getCounter</code>函数内的<code>counter</code>变量。</p>
 <p>但是⚠️注意，每个<code>count</code>函数返回的<code>counter</code>的值并没有按照期望重置到<code>0</code>。</p>
 <p>那是因为，每次调用<code>count</code>函数，一个新的该函数的作用域被创建，但是<code>getCounter</code>函数只创建了一个作用域，因为<code>counter</code>变量是在<code>getCounter()</code>的作用域中定义的，所以它将在每次<code>count</code>函数调用时递增，而不是重置为<code>0</code>。</p>
-<h2 id="工作原理？"><a href="#工作原理？" class="headerlink" title="工作原理？"></a>工作原理？</h2><p>到目前为止，我们知道了闭包是什么还有了解了几个例子，现在我们来探索JavaScript里的闭包到底是如何工作的。</p>
+<h3 id="工作原理？"><a href="#工作原理？" class="headerlink" title="工作原理？"></a>工作原理？</h3><p>到目前为止，我们知道了闭包是什么还有了解了几个例子，现在我们来探索JavaScript里的闭包到底是如何工作的。</p>
 <p>要真正理解闭包，我们必须立即JavaScript里的两个重要概念，1. 执行上下文 2. 词法环境</p>
 <h4 id="执行上下文（Execution-Context）"><a href="#执行上下文（Execution-Context）" class="headerlink" title="执行上下文（Execution Context）"></a>执行上下文（Execution Context）</h4><p>执行上下文是一个当JavaScript被解释执行的时候的一个抽象环境。当全局代码被执行时，他是在全局执行上下文中被执行，当函数被调用时是在函数执行上下文中。</p>
 <p>只能有一个运行的执行上下文（因为JavaScript是单线程），它由称为执行栈或调用栈的堆栈数据结构管理。</p>
@@ -226,7 +226,7 @@
 
 <p>函数的外部词法环境是全局词法环境是因为这个函数是被全局作用域包裹。</p>
 <p><strong>注意</strong>——当函数执行完成，他的执行上下文会被移出栈，但是它的词法环境可能也可能不会被移出内存，这取决于在外部词法环境属性中，它是不是被任何其他词法环境引用。</p>
-<h2 id="剖析闭包例子"><a href="#剖析闭包例子" class="headerlink" title="剖析闭包例子"></a>剖析闭包例子</h2><p>现在我们理解了执行上下文和词法环境，回到闭包。</p>
+<h3 id="剖析闭包例子"><a href="#剖析闭包例子" class="headerlink" title="剖析闭包例子"></a>剖析闭包例子</h3><p>现在我们理解了执行上下文和词法环境，回到闭包。</p>
 <h4 id="例子1-1"><a href="#例子1-1" class="headerlink" title="例子1"></a>例子1</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> name = <span class="string">&#x27;Peter&#x27;</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">displayName</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> peter = person();</span><br><span class="line">peter(); <span class="comment">// prints &#x27;Peter&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>当<code>person</code>函数被执行时，JavaScript引擎为这个函数创建了一个执行上下文和词法环境，在函数执行完后，它返回一个<code>displayName</code>函数并且把它赋值给<code>peter</code>变量。</p>
@@ -260,7 +260,7 @@
 
 
 <p>每次调用<code>count</code>函数，js引擎创建一个新的<code>count</code>函数的词法环境，自增<code>counter</code>变量然后更新<code>getCounter</code>函数的词法环境。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我们了解了闭包是什么还有它的工作原理，闭包是js的一个基础概念，希望能帮到读者。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们了解了闭包是什么还有它的工作原理，闭包是js的一个基础概念，希望能帮到读者。</p>
 
       
 
@@ -363,11 +363,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/01/%E8%BF%91%E6%9C%9F%E7%9A%84%E5%87%A0%E4%B8%AA%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/01/%E7%94%A8Array-from-%E6%9B%B4%E4%BC%98%E9%9B%85%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%B9%B4%E4%BB%BD%E6%95%B0%E7%BB%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          近期的几个学习目标
+          用Array.from()更优雅的实现生成一个年份数组
         
       </div>
     </a>
