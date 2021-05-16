@@ -9,16 +9,23 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <title>数据类型之 Symbol 与 BigInt | 1sm23</title><meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="Symbol定义Symbol 是和像 Number 、String 、 Boolean  一样的新的基本数据类型（primitive），它的值代表的是一个独一无二的值，内部你可以认为它是一个像 129023875892375 一样的一个长数字来确保独一无二，通常用在一些需要避免名字冲突的地方，比如对象属性的键名，这也是它被设计出来的唯一目的。 不像Number 、 String 、 Boolean">
+<meta property="og:type" content="article">
 <meta property="og:title" content="数据类型之 Symbol 与 BigInt">
 <meta property="og:url" content="https://www.1sm23.com/2021/04/27/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B9%8B-Symbol-%E4%B8%8E-BigInt/index.html">
 <meta property="og:site_name" content="1sm23">
+<meta property="og:description" content="Symbol定义Symbol 是和像 Number 、String 、 Boolean  一样的新的基本数据类型（primitive），它的值代表的是一个独一无二的值，内部你可以认为它是一个像 129023875892375 一样的一个长数字来确保独一无二，通常用在一些需要避免名字冲突的地方，比如对象属性的键名，这也是它被设计出来的唯一目的。 不像Number 、 String 、 Boolean">
 <meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gq1io1ho12j30ic08ot9a.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gq8j7s5ed8j30te0jsgo3.jpg">
 <meta property="article:published_time" content="2021-04-27T11:29:08.000Z">
-<meta property="article:modified_time" content="2021-04-27T11:37:13.361Z">
+<meta property="article:modified_time" content="2021-05-07T03:43:15.289Z">
 <meta property="article:author" content="lsm">
-<meta property="article:tag" content="刘时满 personal blog 1sm 1sm23">
+<meta property="article:tag" content="JavaScript数据类型">
+<meta property="article:tag" content="Symbol">
+<meta property="article:tag" content="BigInt">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008i3skNgy1gq1io1ho12j30ic08ot9a.jpg">
   
     <link rel="alternative" href="/atom.xml" title="1sm23" type="application/atom+xml">
   
@@ -160,7 +167,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- flag of hidden posts -->
+        <h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> 是和像 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a> 、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 、 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>  一样的新的基本数据类型（<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">primitive</a>），它的值代表的是一个独一无二的值，内部你可以认为它是一个像 <code>129023875892375</code> 一样的一个长数字来确保独一无二，通常用在一些需要避免名字冲突的地方，比如对象属性的键名，这也是它被设计出来的唯一目的。</p>
+<p>不像Number 、 String 、 Boolean ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;123&#x27;</span> <span class="comment">// String</span></span><br><span class="line"><span class="number">123</span> <span class="comment">// Number</span></span><br><span class="line"><span class="literal">true</span> <span class="comment">// Boolean</span></span><br></pre></td></tr></table></figure>
+
+<p>Symbol 并没有字面量的快捷创建方式，如果你想创建一个 Symbol 值，只能使用 <code>Symbol()</code>的方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sym = <span class="keyword">new</span> <span class="built_in">Symbol</span>()</span><br></pre></td></tr></table></figure>
+
+<p>Symbol() 每次创建的值是不一样的：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sym1 = <span class="keyword">new</span> <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="keyword">const</span> sym2 = <span class="keyword">new</span> <span class="built_in">Symbol</span>();</span><br><span class="line">sym1 === sym2  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>在创建 Symbol 的时候你可以选择性的传入描述（description）:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Symbol</span>(<span class="string">&#x27;asdasd&#x27;</span>)</span><br><span class="line"></span><br><span class="line">但这只是一个为了方便调试的文本描述，不会对产生的值有任何的影响：</span><br><span class="line"></span><br><span class="line">​<span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">const sym1 = new Symbol(&#x27;apple&#x27;);</span></span><br><span class="line"><span class="string">const sym2 = new Symbol(&#x27;apple&#x27;);</span></span><br><span class="line"><span class="string">sym1 === sym2  // false</span></span><br></pre></td></tr></table></figure>
+
+<p>但你还是可以传入这些描述，console 里打印 Symbol 能看到描述值：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq1io1ho12j30ic08ot9a.jpg" alt=""></p>
+<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ol>
+<li>在往对象上添加属性时避免属性重复：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">user.id = <span class="number">4749</span>;</span><br></pre></td></tr></table></figure>
+
+<p>展开 <code>user</code> 我们发现 <code>user</code> 里早就有 <code>id</code> 这个属性了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  id:<span class="number">1234</span>,</span><br><span class="line">  name:<span class="string">&#x27;Johnathan&#x27;</span>,</span><br><span class="line">  city:<span class="string">&#x27;Yunnan&#x27;</span>,</span><br><span class="line">  age:<span class="number">32</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样继续添加 <code>id</code> 会导致之前的 <code>id</code> 会被覆盖，这时候可以使用 Symbol() ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> idSym = <span class="built_in">Symbol</span>(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line">user[idSym] = <span class="number">1231</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<center>    <img style="border-radius: 0.3125em;    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"     src="https://tva1.sinaimg.cn/large/008i3skNgy1gq8j7s5ed8j30te0jsgo3.jpg">    <br>    <div style="color:orange; border-bottom: 1px solid #d9d9d9;    display: inline-block;    color: #999;    padding: 2px;">实际效果</div> </center>
+
+
+
+<p>对象里的 symbol 属性是私密的，意思是用 <code>Object.getOwnPropertyNames()</code>获取对象属性名的时候不能获取 symbol：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> idSym = <span class="built_in">Symbol</span>(<span class="string">&#x27;id&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  id:<span class="number">1234</span>,</span><br><span class="line">  [idSym]:<span class="number">159348</span>,</span><br><span class="line">  name:<span class="string">&#x27;Johnathan&#x27;</span>,</span><br><span class="line">  city:<span class="string">&#x27;Yunnan&#x27;</span>,</span><br><span class="line">  age:<span class="number">32</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(user));		<span class="comment">// [&quot;id&quot;, &quot;name&quot;, &quot;city&quot;, &quot;age&quot;]</span></span><br></pre></td></tr></table></figure>
+
+<p>但又不是完全无法获取，用 `` </p>
+<!-- flag of hidden posts -->
       
 
       
@@ -168,6 +211,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JavaScript数据类型</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Symbol</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">BigInt</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -433,38 +495,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gfw</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">防火长城</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">the great firewall</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bandwagonhost</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">object array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对象数组</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">javscript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">array</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">wxapp</a>
               </li>
              
@@ -526,10 +556,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JavaScript数据类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">v2ray</a>
               </li>
             
             <div class="clearfix"></div>

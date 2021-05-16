@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.1sm23.com/"/>
-  <updated>2021-04-27T05:45:41.820Z</updated>
+  <updated>2021-04-26T05:08:16.853Z</updated>
   <id>https://www.1sm23.com/</id>
   
   <author>
@@ -15,39 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于喜提gfw认证这件事</title>
-    <link href="https://www.1sm23.com/2021/04/25/%E5%85%B3%E4%BA%8E%E5%96%9C%E6%8F%90gfw%E8%AE%A4%E8%AF%81%E8%BF%99%E4%BB%B6%E4%BA%8B/"/>
-    <id>https://www.1sm23.com/2021/04/25/%E5%85%B3%E4%BA%8E%E5%96%9C%E6%8F%90gfw%E8%AE%A4%E8%AF%81%E8%BF%99%E4%BB%B6%E4%BA%8B/</id>
-    <published>2021-04-25T11:02:04.000Z</published>
-    <updated>2021-04-27T05:45:41.820Z</updated>
-    
-    <content type="html"><![CDATA[<p>​        这个博客部署的服务器是搬瓦工的19.9cn2套餐，上面有个v2ray服务，2021年3月一天早上起来v2ray就异常了，上搬瓦工自带的检测工具一测试，果然是IP被ban了，等于这个博客也被连坐，还好hexo deploy配置里同样加了<a href="https://1sm23.github.io">github pages</a>虽然这样不符合github pages 的原本用途，但现在也只能是权宜之计了。</p><p>​        在被ban之后我花了8美刀更换IP，半个小时没到又被封了，发了工单给客服，回复说没有更好的解决办法，</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa3gn2d3j30vn0u0gv2.jpg" alt=""></p><a id="more"></a><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa4ekp81j318k0lw42b.jpg" alt=""></p><p>只能关掉服务等待gfw自动解封（可能）。之后我就彻底躺平了，关机等待可能的解封。今天突然想到这件事情，重新启动服务，发现还是没解封，但意外的发现用梯子还是可以访问博客内容的，但每次文章更新怎么部署到主机就要下一番功夫了，直接<code>hexo deploy</code>现在是不行了，只能每次手动拷贝生成后的<code>public</code>文件夹。所以我打算就这样吧，能看到我博客内容的都是和gfw抗争过的战友了，salute！</p><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gpwa55t1cyj30m80ci0tw.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;​        这个博客部署的服务器是搬瓦工的19.9cn2套餐，上面有个v2ray服务，2021年3月一天早上起来v2ray就异常了，上搬瓦工自带的检测工具一测试，果然是IP被ban了，等于这个博客也被连坐，还好hexo deploy配置里同样加了&lt;a href=&quot;https://1sm23.github.io&quot;&gt;github pages&lt;/a&gt;虽然这样不符合github pages 的原本用途，但现在也只能是权宜之计了。&lt;/p&gt;
-&lt;p&gt;​        在被ban之后我花了8美刀更换IP，半个小时没到又被封了，发了工单给客服，回复说没有更好的解决办法，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://tva1.sinaimg.cn/large/008i3skNgy1gpwa3gn2d3j30vn0u0gv2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="闲言碎语" scheme="https://www.1sm23.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-      <category term="gfw" scheme="https://www.1sm23.com/tags/gfw/"/>
-    
-      <category term="防火长城" scheme="https://www.1sm23.com/tags/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E/"/>
-    
-      <category term="the great firewall" scheme="https://www.1sm23.com/tags/the-great-firewall/"/>
-    
-      <category term="bandwagonhost" scheme="https://www.1sm23.com/tags/bandwagonhost/"/>
-    
-      <category term="v2ray" scheme="https://www.1sm23.com/tags/v2ray/"/>
-    
-  </entry>
   
   <entry>
     <title>Undefined undefined 和 Null null</title>
@@ -228,39 +195,6 @@
   </entry>
   
   <entry>
-    <title>对象数组过滤</title>
-    <link href="https://www.1sm23.com/2020/04/15/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4/"/>
-    <id>https://www.1sm23.com/2020/04/15/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E8%BF%87%E6%BB%A4/</id>
-    <published>2020-04-15T11:25:21.000Z</published>
-    <updated>2020-04-21T15:49:53.456Z</updated>
-    
-    <content type="html"><![CDATA[<p>假设<code>name,text</code>是需要的属性，Es6 解构赋值：    </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">object_array:[</span><br><span class="line">  obj:&#123;</span><br><span class="line">  name,text,</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">object_array.map(<span class="function"><span class="params">obj</span>=&gt;</span>(<span class="function">(<span class="params">&#123;name,text&#125;</span>)=&gt;</span>(name,text))(obj))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;假设&lt;code&gt;name,text&lt;/code&gt;是需要的属性，Es6 解构赋值：    &lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;lin
-      
-    
-    </summary>
-    
-    
-      <category term="javascript" scheme="https://www.1sm23.com/categories/javascript/"/>
-    
-    
-      <category term="object array" scheme="https://www.1sm23.com/tags/object-array/"/>
-    
-      <category term="对象数组" scheme="https://www.1sm23.com/tags/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="javscript" scheme="https://www.1sm23.com/tags/javscript/"/>
-    
-      <category term="array" scheme="https://www.1sm23.com/tags/array/"/>
-    
-  </entry>
-  
-  <entry>
     <title>微信小程序页面上推</title>
     <link href="https://www.1sm23.com/2020/03/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%8E%A8/"/>
     <id>https://www.1sm23.com/2020/03/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%8E%A8/</id>
@@ -345,30 +279,6 @@
   </entry>
   
   <entry>
-    <title>这个博客的历程</title>
-    <link href="https://www.1sm23.com/2019/09/23/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8E%86%E7%A8%8B/"/>
-    <id>https://www.1sm23.com/2019/09/23/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%8E%86%E7%A8%8B/</id>
-    <published>2019-09-23T12:55:17.000Z</published>
-    <updated>2020-04-21T15:47:37.708Z</updated>
-    
-    <content type="html"><![CDATA[<p>就在今天，博客的第一次迁移工作已经完成了，从访问不太稳定的github pages挪到了我那租用了快三年的搬瓦工洛杉矶机房上。配置了 nginx 和 git自动部署，对nginx的简单配置算是了解了一点（感谢伟大的搜索引擎🙏和耐心的教程作者们）。不过，境外的服务器始终是不稳定，我也购入了阿里云的轻量服务，主机在上海，所以这只是万里长征的一小步！在这个域名到期后我打算在阿里云重新购买新域名，备案后进行第二次迁移。</p><p>今天我也添加了https协议，用的是今年4月从<a href="https://freessl.cn">freessl</a>免费申请的证书。我还将解析dns的服务从腾讯云迁移到了阿里云，方便以后操作。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;就在今天，博客的第一次迁移工作已经完成了，从访问不太稳定的github pages挪到了我那租用了快三年的搬瓦工洛杉矶机房上。配置了 nginx 和 git自动部署，对nginx的简单配置算是了解了一点（感谢伟大的搜索引擎🙏和耐心的教程作者们）。不过，境外的服务器始终是不
-      
-    
-    </summary>
-    
-    
-      <category term="闲言碎语" scheme="https://www.1sm23.com/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>安装 mlocate</title>
     <link href="https://www.1sm23.com/2019/09/20/linux-%E5%AE%89%E8%A3%85-mlocate/"/>
     <id>https://www.1sm23.com/2019/09/20/linux-%E5%AE%89%E8%A3%85-mlocate/</id>
@@ -406,29 +316,6 @@
   </entry>
   
   <entry>
-    <title>关于</title>
-    <link href="https://www.1sm23.com/2019/09/20/%E5%85%B3%E4%BA%8E/"/>
-    <id>https://www.1sm23.com/2019/09/20/%E5%85%B3%E4%BA%8E/</id>
-    <published>2019-09-19T16:20:08.000Z</published>
-    <updated>2020-11-29T03:09:13.033Z</updated>
-    
-    <content type="html"><![CDATA[<p>关于这个空间，主要是来存放脑子里的一点东西，人是会被心里的话“憋死”的！我相信心中的不郁闷如果无法畅快的述说出来，身体里会产生对不好的“化学物质”，当然，这都是臆测，哈哈。陆陆续续我会把以前记得和以后想写的都放到这上面来。</p><p><del>过段时间应该会博客加上disqus评论</del>已经加上了，<del>将空间迁移到最近购买的一年阿里云轻量，购置域名、备案再加上https证书，迁移静态博客不是一件复杂的事，主要是想学习一下linux的一些操作，例如vim，还有nginx的简单配置。</del>计划取消，买了一年的主机搁置了一年，除了搭了一段时间的csgo服务器啥也没干，主要是备案太麻烦！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;关于这个空间，主要是来存放脑子里的一点东西，人是会被心里的话“憋死”的！我相信心中的不郁闷如果无法畅快的述说出来，身体里会产生对不好的“化学物质”，当然，这都是臆测，哈哈。陆陆续续我会把以前记得和以后想写的都放到这上面来。&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;过段时间应该会博客加上di
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>.gitignore规则不生效</title>
     <link href="https://www.1sm23.com/2019/09/19/gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88/"/>
     <id>https://www.1sm23.com/2019/09/19/gitignore%E8%A7%84%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88/</id>
@@ -456,6 +343,33 @@
       <category term="gitignore" scheme="https://www.1sm23.com/tags/gitignore/"/>
     
       <category term="git不生效" scheme="https://www.1sm23.com/tags/git%E4%B8%8D%E7%94%9F%E6%95%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new到底干了什么？</title>
+    <link href="https://www.1sm23.com/2018/12/05/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%88%B0%E5%BA%95%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
+    <id>https://www.1sm23.com/2018/12/05/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%88%B0%E5%BA%95%E5%B9%B2%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F/</id>
+    <published>2018-12-05T04:56:13.000Z</published>
+    <updated>2021-05-16T12:03:34.714Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>创建一个空的简单JavaScript对象（即<code>&#123;&#125;</code>）；</li><li>链接该对象（设置该对象的<strong>constructor</strong>）到另一个对象 ；</li><li>将步骤1新创建的对象作为<code>this</code>的上下文 ；</li><li>如果该函数没有返回对象，则返回<code>this</code>。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;创建一个空的简单JavaScript对象（即&lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;）；&lt;/li&gt;
+&lt;li&gt;链接该对象（设置该对象的&lt;strong&gt;constructor&lt;/strong&gt;）到另一个对象 ；&lt;/li&gt;
+&lt;li&gt;将步骤1新创建的对象作为&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="javascript" scheme="https://www.1sm23.com/tags/javascript/"/>
     
   </entry>
   
