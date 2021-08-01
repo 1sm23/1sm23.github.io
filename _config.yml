@@ -4,7 +4,7 @@
 
 # Site
 title: 1sm23
-subtitle: 此博客毫无营养，是我本人的一块外置脑容量
+subtitle: 一块外置脑容量
 description: 1sm的博客
 keywords: 刘时满 personal blog 1sm 1sm23
 author: lsm
@@ -32,7 +32,7 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: 
+external_link:
   enable: true  # Open external links in new tab
 filename_case: 0
 render_drafts: false
@@ -95,9 +95,9 @@ theme: yilia
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  - type: git
-    repo: ssh://root@144.168.56.67:26022/root/git/hexo.git
-    branch: master
+  # - type: git
+  #   repo: ssh://root@144.168.56.67:26023/root/git/hexo.git
+  #   branch: master
   - type: git
     repo: https://github.com/1sm23/1sm23.github.io.git
     branch: master
@@ -165,4 +165,12 @@ jsonContent:
 
 
 
-
+# hexo-hide-posts
+hide_posts:
+  # 可以改成其他你喜欢的名字
+  filter: hidden
+  # 指定你想要传递隐藏文章的 generator，比如让所有隐藏文章在存档页面可见
+  # 常见的 generators 有：index, tag, category, archive, sitemap, feed, etc.
+  public_generators: []
+  # 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录
+  noindex: true

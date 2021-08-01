@@ -1,5 +1,5 @@
 ---
-title: 船新版本之JavaScript闭包
+title: JavaScript闭包
 date: 2020-09-04 20:11:40
 tags:
 - javascript
@@ -9,7 +9,7 @@ categories:
 - javascript
 ---
 
-## 什么是闭包？
+### 什么是闭包？
 
 闭包是在外部函数返回后仍能访问其外部函数作用域的函数。这意味着闭包可以记住并访问外部函数的变量和参数，即使函数已经返回。
 
@@ -43,11 +43,11 @@ console.log(a);         // prints 'global'
 
 
 
-`inner`函数可以访问定义在他自己的作用域、`outer`函数作用域、全局作用域中定义的变量。`outer`函数可以访问在其自身作用域和全局作用域中定义的变量
+`inner `函数可以访问定义在他自己的作用域、`outer `函数作用域、全局作用域中定义的变量。`outer `函数可以访问在其自身作用域和全局作用域中定义的变量
 
 
 
-## 闭包栗子
+### 闭包栗子
 
 #### 例子1
 
@@ -63,11 +63,11 @@ let peter = person();
 peter(); // prints 'Peter'
 ```
 
-在这段代码里，我们调用`person`函数返回了一个内部函数`displayName`并将该内部函数存储在`peter`变量中，当我们调用`peter`函数（实际上是引用了`displayName`函数），控制台打印出了'Peter'。
+在这段代码里，我们调用 `person` 函数返回了一个内部函数 `displayName` 并将该内部函数存储在 `peter` 变量中，当我们调用 `peter`函数（实际上是引用了 `displayName` 函数），控制台打印出了 'Peter'。
 
 
 
-但是`displayName`函数里没有叫做`name`的变量，所以这个函数可以以某种方式访问它的外部函数`person`甚至是在它已经执行完之后。所以这个`displayName`函数实际上就是一个闭包。
+但是 `displayName` 函数里没有叫做 `name` 的变量，所以这个函数可以以某种方式访问它的外部函数 `person` 甚至是在它已经执行完之后。所以这个 `displayName` 函数实际上就是一个闭包。
 
 
 
@@ -86,19 +86,19 @@ console.log(count());  // 1
 console.log(count());  // 2
 ```
 
-这次我们把通过`getCounter`返回的匿名函数赋值给`count`变量，因为`count`函数现在是一个闭包，它能在`getCounter`函数返回之后访问到`getCounter`函数内的`counter`变量。
+这次我们把通过 `getCounter` 返回的匿名函数赋值给 `count` 变量，因为 `count` 函数现在是一个闭包，它能在 `getCounter` 函数返回之后访问到 `getCounter` 函数内的 `counter` 变量。
 
 
 
-但是⚠️注意，每个`count`函数返回的`counter`的值并没有按照期望重置到`0`。
+但是⚠️注意，每个 `count` 函数返回的 `counter` 的值并没有按照期望重置到 `0`。
 
 
 
-那是因为，每次调用`count`函数，一个新的该函数的作用域被创建，但是`getCounter`函数只创建了一个作用域，因为`counter`变量是在`getCounter()`的作用域中定义的，所以它将在每次`count`函数调用时递增，而不是重置为`0`。
+那是因为，每次调用 `count` 函数，一个新的该函数的作用域被创建，但是 `getCounter` 函数只创建了一个作用域，因为 `counter` 变量是在 `getCounter()` 的作用域中定义的，所以它将在每次 `count` 函数调用时递增，而不是重置为 `0`。
 
 
 
-## 工作原理？
+### 工作原理？
 
 到目前为止，我们知道了闭包是什么还有了解了几个例子，现在我们来探索JavaScript里的闭包到底是如何工作的。
 
@@ -134,7 +134,7 @@ console.log(count());  // 2
 
 
 
-当这段代码被执行时，JavaScript引擎创建一个全局执行上下文来执行全局代码，当遇到`first()`函数的调用时，它创建一个新的函数执行上下文并把这个上下文压入栈中
+当这段代码被执行时，JavaScript引擎创建一个全局执行上下文来执行全局代码，当遇到 `first()` 函数的调用时，它创建一个新的函数执行上下文并把这个上下文压入栈中
 
 
 
@@ -146,7 +146,7 @@ console.log(count());  // 2
 
 
 
-当`first()`函数调用完后，它的执行上下文被移出栈，调用栈的当前栈来到它下面的栈也就是全局执行上下文，所以剩下的全局作用域的代码将会被执行。
+当 `first()` 函数调用完后，它的执行上下文被移出栈，调用栈的当前栈来到它下面的栈也就是全局执行上下文，所以剩下的全局作用域的代码将会被执行。
 
 
 
@@ -207,11 +207,11 @@ globalLexicalEnvironment = {
 }
 ```
 
-这里外部词法环境是`null`是因为全局作用域没有外部词法环境。
+这里外部词法环境是 `null` 是因为全局作用域没有外部词法环境。
 
 
 
-当引擎给`first()`函数创建上下文的时候，它也创建了一个词法环境来存储在执行该函数期间定义的变量，所以这个函数的词法环境看起来会像这样：
+当引擎给 `first()` 函数创建上下文的时候，它也创建了一个词法环境来存储在执行该函数期间定义的变量，所以这个函数的词法环境看起来会像这样：
 
 ```javascript
 functionLexicalEnvironment = {
@@ -226,11 +226,11 @@ functionLexicalEnvironment = {
 
 
 
-**注意**——当函数执行完成，他的执行上下文会被移出栈，但是它的词法环境可能也可能不会被移出内存，这取决于在外部词法环境属性中，它是不是被任何其他词法环境引用。
+**注意**——当函数执行完成，他的执行上下文会被移出栈，但是它的词法环境可能不会被移出内存！！**这取决于在外部词法环境属性中，函数的词法环境是否被任何其他词法环境引用**。
 
 
 
-## 剖析闭包例子
+### 剖析闭包例子
 
 现在我们理解了执行上下文和词法环境，回到闭包。
 
@@ -248,7 +248,7 @@ let peter = person();
 peter(); // prints 'Peter'
 ```
 
-当`person`函数被执行时，JavaScript引擎为这个函数创建了一个执行上下文和词法环境，在函数执行完后，它返回一个`displayName`函数并且把它赋值给`peter`变量。
+当 `person` 函数被执行时，JavaScript引擎为这个函数创建了一个执行上下文和词法环境，在函数执行完后，它返回一个 `displayName `函数并且把它赋值给 `peter` 变量。
 
 
 
@@ -264,15 +264,15 @@ personLexicalEnvironment = {
 }
 ```
 
-当`person`函数执行完后，它的执行上下文被移出栈，但是他的词法环境依然还在内存里，因为它词法环境被它内部的`displayName`函数的词法环境引用，所以它(`person`函数)的变量依然还在内存里。
+当 `person` 函数执行完后，它的执行上下文被移出栈，但是他的词法环境依然还在内存里，因为它词法环境被它内部的 `displayName` 函数的词法环境引用，所以它( `person` 函数)的变量依然还在内存里。
 
 
 
-当`personLexicalEnvironment`被创建，js引擎会把`personLexicalEnvironment`附加到所有在这个词法环境中定义的函数中，所以之后有任何内部函数被调用时，js引擎会把外部词法环境设置成函数定义时附加上的那个。
+当 `personLexicalEnvironment `被创建，js引擎会把 `personLexicalEnvironment` 附加到所有在这个词法环境中定义的函数中，所以之后有任何内部函数被调用时，js引擎会把外部词法环境设置成函数定义时附加上的那个。
 
 
 
-当`peter`函数被执行（实际上是`displayName`函数的一个引用），js引擎为它创建了一个新的执行上下文和词法环境。
+当 `peter` 函数被执行（实际上是 `displayName` 函数的一个引用），js引擎为它创建了一个新的执行上下文和词法环境。
 
 
 
@@ -287,11 +287,11 @@ displayNameLexicalEnvironment = {
 }
 ```
 
-因为在`displayName`函数里没有变量，它的环境记录是空的。在这个函数的执行期间，js引擎会在这个函数的词法环境里查找变量`name`。
+因为在 `displayName` 函数里没有变量，它的环境记录是空的。在这个函数的执行期间，js引擎会在这个函数的词法环境里查找变量 `name`。
 
 
 
-因为在`displayName`函数的词法环境里没有变量，js引擎会在外部环境查找，也就是仍然存储在内存里的`person`函数的词法环境。js引擎找到变量`name`然后打印在控制台中。
+因为在 `displayName` 函数的词法环境里没有变量，js引擎会在外部环境查找，也就是仍然存储在内存里的 `person` 函数的词法环境。js引擎找到变量 `name` 然后打印在控制台中。
 
 #### 例子2
 
@@ -310,7 +310,7 @@ console.log(count());  // 2
 
 
 
-同样的，`getCounter`函数的词法环境：
+同样的，`getCounter `函数的词法环境：
 
 ```javascript
 getCounterLexicalEnvironment = {
@@ -322,11 +322,11 @@ getCounterLexicalEnvironment = {
 }
 ```
 
-这个函数返回了一个匿名函数赋值给了`count`变量。
+这个函数返回了一个匿名函数赋值给了 `count` 变量。
 
 
 
-当`count`函数被执行时，它的词法环境:
+当 `count` 函数被执行时，它的词法环境:
 
 ```javascript
 countLexicalEnvironment = {
@@ -337,15 +337,15 @@ countLexicalEnvironment = {
 }
 ```
 
-当`count`函数被调用，js引擎会在这个函数的词法环境里查找`counter`变量，同样的它的环境记录是空的，引擎会从函数的外部词法环境里查找。
+当 `count` 函数被调用，js引擎会在这个函数的词法环境里查找 `counter` 变量，同样的它的环境记录是空的，引擎会从函数的外部词法环境里查找。
 
 
 
-引擎找到变量，打印在控制台上然后在`getCounter`函数词法环境里自增`counter`变量。
+引擎找到变量，打印在控制台上然后在 `getCounter` 函数词法环境里自增 `counter` 变量。
 
 
 
-在第一次调用`count`函数后，`getCounter`函数的词法环境：
+在第一次调用 `count` 函数后，`getCounter `函数的词法环境：
 
 ```javascript
 getCounterLexicalEnvironment = {
@@ -359,10 +359,4 @@ getCounterLexicalEnvironment = {
 
 
 
-每次调用`count`函数，js引擎创建一个新的`count`函数的词法环境，自增`counter`变量然后更新`getCounter`函数的词法环境。
-
-
-
-## 总结
-
-我们了解了闭包是什么还有它的工作原理，闭包是js的一个基础概念，希望能帮到读者。
+每次调用 `count` 函数，js引擎创建一个新的 `count` 函数的词法环境，自增 `counter` 变量然后更新 `getCounter` 函数的词法环境。

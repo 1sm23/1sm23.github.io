@@ -8,6 +8,9 @@ Tags:
 
 ---
 
-总体上，flex布局方式对齐的方式有
+##### 列表每行数量相同
+
+
 
 [张鑫旭原文](https://www.zhangxinxu.com/wordpress/2019/08/css-flex-last-align/)
+
